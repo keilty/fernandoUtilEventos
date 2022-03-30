@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 
 // let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
 
-const firstLetter = require('../utils/firstLetter');
+
 
 module.exports = {
     index : (req,res) => {        
