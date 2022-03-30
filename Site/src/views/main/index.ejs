@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+
+<body class="home">     
+
+    <%-include('../partials/header') %>
+
+    <!-- /* ------------Carrusel--------------- */ -->
+    <div class="carrusel">
+        <!-- Container -->
+  <div class="slideshow-container fade">
+  
+    <!-- Imagenes y mensajes -->
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="/images/carrusel1.png" style="width:100%">
+      <div class="Info"><h1>FERNANDO UTIL EVENTOS</h1><h4>Más de 10 años a su servicio</h4></div>
+    </div>
+      
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="/images/carrusel2.png" style="width:100%">
+      <div class="Info"><h1>Alquiler de vajilla y mobiliario</h1><h4>Su evento tendrá la calidad de FERNANDO</h4></div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="/images/carrusel3.png" style="width:100%">
+      <div class="Info"><h1>Pasión por lo que hacemos</h1><h4>Atención al detalle, para un evento inolvidable</h4></div>
+    </div>
+  
+    <!-- Botones atrás y adelante -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- Círculos -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div> 
+    </div>
+    <!--------------Fin del Carrusel----------------->
+
+    <article class="destacados">
+        <h2>Servicio de alquiler totalmente personalizado</h2>
+        <section>
+            <div class="productos">
+                <div class="prodGrupo">
+                   
+                      <div class="prodUnidad">
+                        <a href="/productsList/#vajilla"><img src="/images/products/cubiertos-min.jpg" alt="imagen de producto">
+                            <p>Cubiertos</p>
+                            <a href="/productsList/#vajilla" class="button">VER MAS</a></a>
+                    </div>
+                    <div class="prodUnidad">
+                        <a href="/productsList/#vajilla"><img src="/images/products/copas-min.jpg" alt="imagen de producto">
+                            <p>Copas</p>
+                            <a href="/productsList/#vajilla" class="button">VER MAS</a></a>
+                    </div>
+                    <div class="prodUnidad">
+                        <a href="/productsList/#vajilla"><img src="/images/products/vasos-min.jpg" alt="imagen de producto">
+                            <p>Vasos</p>
+                            <a href="/productsList/#vajilla" class="button">VER MAS</a></a>
+                    </div>
+                   
+                                     
+                </div>                
+            </div>
+            <!-- <div class="hexagonos">
+                <h2>Nuestras opciones</h2>
+                <div class="hexaDisplay">
+                    <div><img src="/images/hexagono1.png" alt=""></div>
+                    <div><img src="/images/hexagono2.png" alt=""></div>
+                    <div><img src="/images/hexagono3.png" alt=""></div>
+                    <div><img src="/images/hexagono4.png" alt=""></div>
+                </div>
+                <p>Aca ponemos un especie de carrusel que muestra todas las cosas</p>
+            </div> -->
+        </section>
+        <div class="button"><a href="/productsList">VER TODOS LOS PRODUCTOS</a></div>
+    </article>
+
+    <article class="sobreNosotros">
+        <h2>Sobre Nosotros</h2>
+        <div class="imagen">
+            <p>Somos una empresa familiar con más de 10 años de experiencia en el rubro, los cuales 
+                avalan nuestra la calidad de nuestro servicio y excelente trato para con nuestros clientes.
+            </p>
+        <div><img src="/images/products/nosotros.jpg" alt="panal y trajes"></div>
+        </div>        
+    </article>
+
+    <!-- <article>
+        <h2>Cuidemos a las abejas</h2>
+        <div class="cuidemosImagen">
+            <div class="salvemos"><img src="/images/salvemosAbejas.png" alt=""></div>
+        <p>Las abejas desempeñan un papel imprescindible para el equilibrio ecológico en la naturaleza y para la vida humana, por su papel como polinizadoras y por su capacidad para producir miel, jalea real, cera y propóleo.</p>
+        </div>
+        <section class="hexagonoInfo">
+            <div class="hexa">
+                <img src="/images/abejas1.png" alt="">
+                <p>Los cientificos dicen que las abejas son responsables de uno de cada tres bocados de alimento que ingerimos.</p>
+            </div>
+            <div class="hexa">
+                <img src="/images/abejas2.png" alt="">
+                <p>Su presencia favorece la biodiversidad y contribuye a la preservación y estabilidad ecológica de los espacios naturales.</p>
+            </div>
+            <div class="hexa">
+                <img src="/images/abejas3.png" alt="">
+                <p>Muchos frutos y hortalizas necesitan polinización para su cultivo, las abejas son responsables del 80% de la polinización.</p>
+            </div>
+        </section>
+        <div class="button"><a href="https://sada.org.ar/protegeunacolmena/" target="_blank">QUIERO AYUDAR A LAS ABEJAS</a></div>
+    </article> -->
+</main>
+
+<%-include('../partials/footer') %>
+
+<!-- Javascript para el carrusel -->
+
+<%-include('../partials/scripts') %>
+</body>
+</html>

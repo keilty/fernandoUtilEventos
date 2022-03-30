@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%-include('../partials/head')%> 
+  
+  <body class="add">
+
+    <%-include('../partials/header')%>
+
+    <main>
+        <h3>Solicite su presupuesto</h3>
+        <!-- <p>Le responderemos a la brevedad</p> -->
+
+        <div class="contenedor">
+          
+          <form method="POST" action="send" id="form-presupuesto">
+            <br>
+
+          <!-- <div class="container-input-total">
+            <input type="text" placeholder="Empresa" id="business" name="business" value="<%= locals.old && old.business ? old.business : null %>">
+            <span id="error-business" class="error"><%= locals.errors && errors.business ? errors.business.msg : null %></span>
+            <span id="info-business" class="errorVF"></span>
+          </div>      -->
+
+          <div class="container-input-total">
+            <input type="text" placeholder="Nombre y Apellido" id="name" name="fullName" value="<%= locals.old && old.name ? old.name : null %>">
+            <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+            <span id="info-name" class="errorVF"></span>
+          </div>
+
+            <!-- <div class="container-input-total">
+              <input type="text" placeholder="Direccion" id="address" name="address" value="<%= locals.old && old.address ? old.address : null %>">
+              <span id="error-address" class="error"><%= locals.errors && errors.address ? errors.address.msg : null %></span>
+              <span id="info-address" class="errorVF"></span>
+            </div> -->
+     
+
+<!--          
+            <div class="container-input-total">
+              <input type="text" placeholder="Ciudad" id="city" name="city" value="< %= locals.old && old.city ? old.city : null %>">
+              <span id="error-city" class="error">< %= locals.errors && errors.city ? errors.city.msg : null %></span>
+              <span id="info-city" class="errorVF"></span>
+            </div>  
+                 -->
+          
+         
+            <!-- <div class="container-input-total">
+              <input type="text" placeholder="Provincia" id="province" name="province" value="<%= locals.old && old.province ? old.province : null %>">
+              <span id="error-province" class="error"><%= locals.errors && errors.province ? errors.province.msg : null %></span>
+              <span id="info-province" class="errorVF"></span>
+            </div>   -->
+             
+          
+          
+            <div class="container-input-total">
+              <input type="text" placeholder="Localidad" id="city" name="city" value="<%= locals.old && old.city ? old.city : null %>">
+              <span id="error-city" class="error"><%= locals.errors && errors.city ? errors.city.msg : null %></span>
+              <span id="info-city" class="errorVF"></span>
+              
+          </div>        
+          
+  
+          <!-- <div class="container-input-total">
+            <input type="text" placeholder="Código Postal" id="zipcode" name="zipcode" value="<%= locals.old && old.zip-code ? old.zip-code : null %>">
+            <span id="error-zip-code" class="error"><%= locals.errors && errors.zip-code ? errors.zip-code.msg : null %></span>
+            <span id="info-zip-code" class="errorVF"></span>
+          </div>   -->
+          
+            <div class="container-input-total">
+              <input type="text" placeholder="Teléfono" id="phone" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
+              <span id="error-phone" class="error"><%= locals.errors && errors.phone ? errors.phone.msg : null %></span>
+              <span id="info-phone" class="errorVF"></span>       
+          </div>        
+          
+        
+            <div class="container-input-total">
+              <input type="email" placeholder="E-mail" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
+              <span id="error-email" class="error"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+              <span id="info-email" class="errorVF"></span>
+            </div>  
+            
+            
+            <!-- <div class="container-input-total" class="total">
+              <input type="text" placeholder="¿Cómo nos conoció?" id="conocio" name="conocio" value="<%= locals.old && old.conocio ? old.conocio : null %>">
+              <span id="error-conocio" class="error"><%= locals.errors && errors.conocio ? errors.conocio.msg : null %></span>
+              <span id="info-conocio" class="errorVF"></span>
+            </div>   -->
+     
+         
+          <div class="preguntas">
+            <p>¿Cómo le gustaría ser contactado?</p><br>
+                <div>
+                    <input type="radio" id="contactChoice1"
+                    name="contact" value="email">
+                    <label for="contactChoice1">Por e-mail</label>
+                <br>
+                    <input type="radio" id="contactChoice2"
+                    name="contact" value="telefono">
+                    <label for="contactChoice2">Por teléfono</label>
+
+                </div>
+            <span class="error"><%= locals.errores && errores.address ? errores.address.msg : null %></span>                       
+        </div>
+
+        <!-- <h4>Sobre el Evento</h4> -->
+        <div class="container-input-total">
+            <input type="text" placeholder="Fecha estimada de evento" id="dateEvent" name="dateEvent" value="<%= locals.old && old.date-event ? old.date-event : null %>">
+            <span id="error-date-event" class="error"><%= locals.errors && errors.date-event ? errors.date-event.msg : null %></span>
+            <span id="info-date-event" class="errorVF"></span>
+          </div>  
+          
+          <div class="container-input-total">
+            <input type="text" placeholder="¿Cuántos invitados?" id="guests" name="guests" value="<%= locals.old && old.guests ? old.guests : null %>">
+            <span id="error-guests" class="error"><%= locals.errors && errors.guests ? errors.guests.msg : null %></span>
+            <span id="info-guests" class="errorVF"></span>
+          </div>  
+
+          <div class="preguntas">
+            <p>¿Qué tipo de evento?</p><br>
+                <div>
+                    <input type="checkbox" id="typeChoice1"
+                    name="type" value="privado">
+                    <label for="typeChoice1">Fiesta privada</label>
+                <br>
+                    <input type="checkbox" id="typeChoice2"
+                    name="type" value="casamiento">
+                    <label for="typeChoice2">Casamiento</label>
+                <br>
+                    <input type="checkbox" id="typeChoice3"
+                    name="type" value="deportivo">
+                    <label for="typeChoice3">Evento deportivo</label>
+                <br>
+                    <input type="checkbox" id="typeChoice4"
+                    name="type" value="feria">
+                    <label for="typeChoice4">Feria</label>
+                <br>
+                    <input type="checkbox" id="typeChoice5"
+                    name="type" value="empresarial">
+                    <label for="typeChoice5">Evento empresarial</label>
+                </div>
+            <span class="error"><%= locals.errores && errores.address ? errores.address.msg : null %></span>                       
+        </div>
+
+        <div class="container-input-total" class="total">
+          <input type="text" placeholder="Otro tipo de evento" id="typeOther" name="typeOther" value="<%= locals.old && old.type-other ? old.type-other : null %>">
+          <span id="error-type-other" class="error"><%= locals.errors && errors.type-other ? errors.type-other.msg : null %></span>
+          <span id="info-type-other" class="errorVF"></span>
+        </div>  
+
+        <div class="preguntas">
+          <p>¿Qué tipo de accesorios necesita?</p><br>
+              <div>
+                  <input type="checkbox" id="typeChoice1"
+                  name="accesorios" value="vajilla">
+                  <label for="typeChoice1">Vajilla</label>
+              <br>
+                  <input type="checkbox" id="typeChoice2"
+                  name="accesorios" value="mesas">
+                  <label for="typeChoice2">Mesas</label>
+              <br>
+                  <input type="checkbox" id="typeChoice3"
+                  name="accesorios" value="sillas">
+                  <label for="typeChoice3">Sillas</label>
+              <br>
+                  <input type="checkbox" id="typeChoice4"
+                  name="accesorios" value="manteleria">
+                  <label for="typeChoice4">Mantelería</label>
+              <br>
+                  <input type="checkbox" id="typeChoice5"
+                  name="accesorios" value="parilla">
+                  <label for="typeChoice5">Parrilla</label>
+                <br>
+                  <input type="checkbox" id="typeChoice5"
+                  name="accesorios" value="sillones">
+                  <label for="typeChoice5">Sillones</label>
+              </div>
+          <span class="error"><%= locals.errores && errores.address ? errores.address.msg : null %></span>                       
+      </div>
+
+      <div class="container-input-total">
+        <textarea placeholder="Descripción" id="description" name="description"><%= locals.old && old.description ? old.description : null %></textarea>
+        <label for="description"></label>
+        <span id="error-description" class="error"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
+        <span id="info-description" class="errorVF"></span>
+        </div>
+
+        
+        <button class="btn-add" type="submit" value="submit">Pedir presupuesto</button>
+        <button class="btn-add"><a href="/">Cancelar</a></button>
+        </form>
+      
+      </div>
+     
+    </main>
+    
+    <%-include('../partials/footer') %>
+    <script src="/javascripts/presupuestoValidatorFront.js"></script>
+  </body>
+</html>
